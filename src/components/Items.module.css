@@ -1,0 +1,9 @@
+.itemStyles{
+  color: rgb(155, 56, 56);
+  font-weight: bold;
+}
+
+
+.itemButton{
+  float: right;
+}
