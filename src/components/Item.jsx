@@ -1,17 +1,18 @@
 import styles from "./Items.module.css";
 
-const Item = ({item}) => {
-
-const handleOnClickEvent=(events)=>{
-  console.log(events); 
-  console.log(`${item} lelo.`)
-}
+const Item = ({ item, bought,handleOnClickEvent}) => {
+ 
 
   return (
-    <li className={`${styles.itemStyles} list-group-item`} >{item}
-    <button className={`${styles.itemButton} btn btn-info`}
-    onClick={(events) =>handleOnClickEvent(events)}// handleOnClickEvent is the refference to the function above .
-    >Buy</button>
+    <li className={`${styles.itemStyles} list-group-item ${bought && "active"} `}>
+      {item}
+      <button
+        className={`${styles.itemButton} btn btn-outline-success my-2 my-sm-0`}
+        onClick={handleOnClickEvent} // handleOnClickEvent is the refference to the function above .
+      >
+        Buy
+      </button>
+
     </li>
   );
 };
